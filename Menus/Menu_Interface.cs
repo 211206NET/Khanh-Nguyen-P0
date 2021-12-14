@@ -1,4 +1,4 @@
-namespace Electronics;
+namespace Menus;
 interface Menu 
 {
     public void DisplayMenu ();

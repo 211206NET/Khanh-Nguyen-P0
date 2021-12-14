@@ -1,4 +1,4 @@
-namespace Electronics;
+namespace Menus;
 
 public class Staff_Menu : Menu
 {
