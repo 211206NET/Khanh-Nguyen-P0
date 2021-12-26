@@ -8,12 +8,11 @@ public class Staff_Menu : IMenu
     public int DisplayMenu ()
     {
         Console.WriteLine ("Please select a Menu to continue");
-        Console.WriteLine ("1 - Set Your Store" );
-        Console.WriteLine ("2 - Show Store List" );
-        Console.WriteLine ("3 - View Store Inventory");
-        Console.WriteLine ("4 - View All Inventories" );
-        Console.WriteLine ("5 - Replenishment" );
-        Console.WriteLine ("6 - Sign Out");
+        Console.WriteLine ("1 - Show Store List" );
+        Console.WriteLine ("2 - View Store Inventory");
+        Console.WriteLine ("3 - View All Inventories" );
+        Console.WriteLine ("4 - Replenishment" );
+        Console.WriteLine ("0 - Sign Out");
 
         _input = Console.ReadLine ();
 
@@ -40,14 +39,9 @@ public class Staff_Menu : IMenu
                 returned = 24; 
             }
             break;
-            case "5":
+            case "0":
             {
-                returned = 25; 
-            }
-            break;
-            case "6":
-            {
-                returned = 26; 
+                returned = 0; 
             }
             break;
             default:

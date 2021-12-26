@@ -4,13 +4,6 @@ namespace ESLogic;
 
 public class Customer_Logic
 {
-    public List<Product> GetStoreInventory (int storeId)
-    {
-            List<Product> storeInventory = new List<Product>();
-            //Query Inventory by store ID here!
-            return storeInventory;
-    }
-
     public List<OrderItem> AddToCart (OrderItem ordItem)
     {
        OrderItem orItem = ordItem;

@@ -44,6 +44,12 @@ public class Users
         email = Console.ReadLine();
         Console.WriteLine("Enter your Password:");
         pass = Console.ReadLine();
+    }
 
+    public List<Product> GetStoreInventory (int storeId)
+    {
+            List<Product> storeInventory = new List<Product>();
+            //Query Inventory by store ID here!
+            return storeInventory;
     }
 }

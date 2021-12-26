@@ -13,7 +13,7 @@ public class Customer_Menu : IMenu
         Console.WriteLine ("3 - View Store Inventory");
         Console.WriteLine ("4 - Add Item Cart" );
         Console.WriteLine ("5 - View Cart" );
-        Console.WriteLine ("6 - Sign Out");
+        Console.WriteLine ("0 - Sign Out");
 
         _input = Console.ReadLine ();
 
@@ -45,9 +45,9 @@ public class Customer_Menu : IMenu
                 returned = 15; 
             }
             break;
-            case "6":
+            case "0":
             {
-                returned = 16; 
+                returned = 0; 
             }
             break;
             default:
