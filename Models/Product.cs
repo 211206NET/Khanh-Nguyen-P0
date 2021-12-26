@@ -7,7 +7,5 @@ public class Product
 
     private String _productDiscription { get; set; } 
 
-    private Double _productPrice { get; set; } 
-
-    private int _storeId { get; set; } 
+    private double _productPrice { get; set; }  
 }

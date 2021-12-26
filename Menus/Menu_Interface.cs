@@ -1,5 +1,5 @@
 namespace Menus;
-interface Menu 
+public interface IMenu 
 {
-    public void DisplayMenu ();
+    int DisplayMenu ();
 }

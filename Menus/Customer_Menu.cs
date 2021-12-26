@@ -1,14 +1,59 @@
 namespace Menus;
 
-public class Customer_Menu : Menu
+public class Customer_Menu : IMenu
 {
-    public void DisplayMenu ()
+     private string _input = " ";
+    public int returned = 0;
+
+    public int DisplayMenu ()
     {
+        Console.WriteLine ("Please select a Menu to continue");
         Console.WriteLine ("1 - Set Your Store" );
         Console.WriteLine ("2 - Show Store List" );
         Console.WriteLine ("3 - View Store Inventory");
         Console.WriteLine ("4 - Add Item Cart" );
         Console.WriteLine ("5 - View Cart" );
         Console.WriteLine ("6 - Sign Out");
-    } 
+
+        _input = Console.ReadLine ();
+
+
+        switch(_input)
+        {
+            case "1":
+            {
+                returned = 11; 
+            }
+            break;
+            case "2":
+            {
+                returned = 12; 
+            }
+            break;
+            case "3":
+            {
+                returned = 13; 
+            }
+            break;
+            case "4":
+            {
+                returned = 14; 
+            }
+            break;
+            case "5":
+            {
+                returned = 15; 
+            }
+            break;
+            case "6":
+            {
+                returned = 16; 
+            }
+            break;
+            default:
+                returned = 404;
+            break;
+        }
+            return returned;
+    }           
 }

@@ -1,0 +1,17 @@
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.csproj.AssemblyReference.cache
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.AssemblyInfoInputs.cache
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.AssemblyInfo.cs
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.csproj.CoreCompileInputs.cache
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\ESLogic.deps.json
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\ESLogic.dll
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\ref\ESLogic.dll
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\ESLogic.pdb
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\Models.dll
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\Models.pdb
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.csproj.CopyComplete
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.dll
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ref\ESLogic.dll
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.pdb
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\Menus.dll
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\Menus.pdb
