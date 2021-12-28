@@ -3,7 +3,7 @@ namespace Menus;
 public class Staff_Menu : IMenu
 {
      private string _input = " ";
-    public int returned = 0;
+    public int returned;
 
     public int DisplayMenu ()
     {

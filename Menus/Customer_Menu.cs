@@ -3,13 +3,13 @@ namespace Menus;
 public class Customer_Menu : IMenu
 {
      private string _input = " ";
-    public int returned = 0;
+    public int returned;
 
     public int DisplayMenu ()
     {
         Console.WriteLine ("Please select a Menu to continue");
-        Console.WriteLine ("1 - Set Your Store" );
-        Console.WriteLine ("2 - Show Store List" );
+        Console.WriteLine ("1 - Show Store List" );
+        Console.WriteLine ("2 - Choose your Store" );
         Console.WriteLine ("3 - View Store Inventory");
         Console.WriteLine ("4 - Add Item Cart" );
         Console.WriteLine ("5 - View Cart" );
