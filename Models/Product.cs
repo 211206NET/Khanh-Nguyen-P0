@@ -1,11 +1,31 @@
 namespace Models;
 public class Product
 {
-    private int _productId { get; set; }
+    private int _productId;
+    public int productId
+    { 
+        get => _productId; 
+        set => _productId = value; 
+    }
 
-    private String _productName { get; set; } 
+    private String _productName; 
+    public String productName
+    { 
+        get => _productName; 
+        set => _productName = value; 
+    } 
 
-    private String _productDiscription { get; set; } 
+    private String _productDescription; 
+    public String productDescription
+    { 
+        get => _productDescription; 
+        set => _productDescription = value; 
+    } 
 
-    private double _productPrice { get; set; }  
+    private double _productPrice; 
+    public double productPrice
+    { 
+        get => _productPrice; 
+        set => _productPrice = value; 
+    }  
 }

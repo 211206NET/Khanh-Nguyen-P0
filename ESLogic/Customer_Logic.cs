@@ -1,20 +1,25 @@
 ﻿using Models;
+using System;
 namespace ESLogic;
 
 
 public class Customer_Logic
 {
-    private Customer _customer;
-    private int _stId;
+    public int stId;
+    public int proId;
+    public int custId;
+    public int quantity;
+    private  int _orderId = 0 ;
     public bool isSignedIn = false;
-    private string email;
-     private string pass;
+    private string _email;
+    private string _pass;
+    public List<OrderItem> itemInCart = new List<OrderItem> ();
 
-     public int SetStore ()
+    public int SetStore ()
     {
         Console.WriteLine ("Enter Store ID: ");
-        _stId = Convert.ToInt32(Console.ReadLine());
-        return _stId;
+        stId = Convert.ToInt32(Console.ReadLine());
+        return stId;
     }
 
     public List<Store> GetAllStores ()
@@ -39,9 +44,9 @@ public class Customer_Logic
     public void SignUp ()
     {
         Console.WriteLine("Enter your Email:");
-        email = Console.ReadLine();
+        _email = Console.ReadLine();
         Console.WriteLine("Enter your Password:");
-        pass = Console.ReadLine();
+        _pass = Console.ReadLine();
     }
 
     public List<Product> GetStoreInventory (int storeId)
@@ -50,26 +55,22 @@ public class Customer_Logic
             //Query Inventory by store ID here!
             return storeInventory;
     }
-    public List<OrderItem> AddToCart (OrderItem ordItem)
+    public List<OrderItem> AddToCart ()
     {
-       OrderItem orItem = ordItem;
-        List<OrderItem> itemInCart = new List<OrderItem> ();
-        itemInCart.Add(orItem);
+        Console.WriteLine ("Enter a Product ID to add ");
+        proId = Convert.ToInt32(Console.ReadLine());
+        OrderItem item = new OrderItem ();
+        itemInCart.Add(item);
         return itemInCart;
     }
 
-    public int CreateOrder(Customer cust, Store sto)
+    public int CreateOrder()
     {   
-        int custId = cust.Cid;
-        int stId = sto.Stid;
-        int orderId = 0 ;
-        return orderId;
+        return _orderId;
     }
 
-   public void FinalizedOrder (List<OrderItem> itemInCart)
+   public void FinalizedOrder ()
    {
-       List<OrderItem> checkOut = new List<OrderItem> ();
-       checkOut = itemInCart;
        //Persist to database here!!!
    }
 }

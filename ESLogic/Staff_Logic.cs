@@ -2,9 +2,10 @@ using Models;
 namespace ESLogic;
 public class Staff_Logic
 {
-    private int _stId;
-    private string email;
-    private string pass;
+    public int stId;
+    public int staffId;
+    private string _email;
+    private string _pass;
     public bool isSignedIn;
 
     public int SetStore ()
@@ -20,17 +21,17 @@ public class Staff_Logic
         return storeList;
     }
 
-    public bool StaffSignIn ()
+    public int StaffSignIn ()
     {
         Console.WriteLine("Enter your Email:");
-        email = Console.ReadLine();
+        _email = Console.ReadLine();
         Console.WriteLine("Enter your Password:");
-        pass = Console.ReadLine();
+        _pass = Console.ReadLine();
 
         isSignedIn = true;
 
 
-        return isSignedIn;
+        return staffId;
     }
 
     public List<Product> GetAllStoreInventory ()

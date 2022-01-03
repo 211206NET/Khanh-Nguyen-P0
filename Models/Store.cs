@@ -8,5 +8,10 @@ public class Store
          set => _storeId = value; 
      }
 
-    private String _storeName { get; set; }
+    private String _storeName 
+    public String storeName
+    { 
+        get => _storeName; 
+        set => _storeName = value;
+    }
 }

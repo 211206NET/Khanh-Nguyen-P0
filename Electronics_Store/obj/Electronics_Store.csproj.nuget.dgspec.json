@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj": {}
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_store\\Electronics_Store.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj": {
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_store\\Electronics_Store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj",
+        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_store\\Electronics_Store.csproj",
         "projectName": "Electronics_Store",
-        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj",
+        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_store\\Electronics_Store.csproj",
         "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\obj\\",
+        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_store\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
