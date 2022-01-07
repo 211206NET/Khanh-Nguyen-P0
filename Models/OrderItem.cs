@@ -2,13 +2,8 @@ namespace Models;
 public class OrderItem 
 {
     // Use this constructor to make itemInCart list
-    public OrderItem( int cId, int sId, int pId, double uprice, int qty)
+    public OrderItem()
     {
-        this._customerId = cId;
-        this._storeId = sId;
-        this._prodId = pId;
-        this._unitPrice = uprice;
-        this._quanity = qty;
     }
 
     // Use this constructor to group orderitem base on order number

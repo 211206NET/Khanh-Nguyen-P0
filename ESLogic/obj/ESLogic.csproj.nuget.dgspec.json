@@ -4,6 +4,68 @@
     "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj": {}
   },
   "projects": {
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj",
+        "projectName": "DataRepository",
+        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj",
+        "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.Sqlclient": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,6 +88,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj": {
+                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj"
+              },
               "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj": {
                 "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj"
               },

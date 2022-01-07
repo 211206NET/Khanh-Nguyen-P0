@@ -2,7 +2,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj" />
-     <ProjectReference Include="..\Menus\Menus.csproj" />
+    <ProjectReference Include="..\Menus\Menus.csproj" />
+    <ProjectReference Include="..\DataRepository\DataRepository.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

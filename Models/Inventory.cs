@@ -1,4 +1,4 @@
-namespace Moddels;
+namespace Models;
 
 public class Inventory
 {
@@ -14,16 +14,23 @@ public class Inventory
         get => _productId;
         set => _productId = value;
     }
-    private string _productDescription;
-    public String productDescription
+    private string _productName;
+    public String productName
     {
-        get => _productDescription;
-        set => _productDescription = value;
+        get => _productName;
+        set => _productName = value;
     }
-    private int _qunatity;
-    public int qunatity
+    private int _quantity;
+    public int quantity
     {
-        get => _qunatity;
-        set => _qunatity = value;
+        get => _quantity;
+        set => _quantity = value;
+    }
+
+    private double _unitPrice;
+    public double unitPrice
+    {
+        get => _unitPrice;
+        set => _unitPrice = value;
     }
 }

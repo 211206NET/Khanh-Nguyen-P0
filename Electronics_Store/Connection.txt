@@ -1,0 +1,1 @@
+Server=revaturetraining-db.cup96aihrhin.us-east-2.rds.amazonaws.com,1433;Initial Catalog=Electronics_Store_db;User ID=khanh;Password=Revtrain;Encrypt=False;

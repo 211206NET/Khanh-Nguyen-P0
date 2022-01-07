@@ -2,7 +2,7 @@
 public class Customer
 {
     private int _customerId;
-    public int customerid
+    public int customerId
     {
         get => _customerId;
         set => _customerId = value;
@@ -29,6 +29,13 @@ public class Customer
         set => _streetNumber = value; 
     }
 
+    private String ? _apt;
+    public String apt 
+    {
+        get => _apt;
+        set => _apt = value;
+    }
+
     private String _city;
     public String city
     { 
@@ -49,14 +56,14 @@ public class Customer
         set => _zip = value; 
     }
 
-    private String _email
+    private String _email;
     public String email
     {
         get => _email;
         set => _email = value;
     }
 
-    private String _password
+    private String _password;
     public String password
     {
         get => _password;

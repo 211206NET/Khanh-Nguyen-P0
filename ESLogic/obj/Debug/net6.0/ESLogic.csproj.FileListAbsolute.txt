@@ -15,3 +15,5 @@ C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\n
 C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\obj\Debug\net6.0\ESLogic.pdb
 C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\Menus.dll
 C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\Menus.pdb
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\DataRepository.dll
+C:\Users\kwin8\Documents\Revature Worksspace\Khanh-Nguyen-P0\ESLogic\bin\Debug\net6.0\DataRepository.pdb

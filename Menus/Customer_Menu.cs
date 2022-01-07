@@ -11,7 +11,7 @@ public class Customer_Menu : IMenu
         Console.WriteLine ("1 - Show Store List" );
         Console.WriteLine ("2 - Choose your Store" );
         Console.WriteLine ("3 - View Store Inventory");
-        Console.WriteLine ("4 - Add Item Cart" );
+        Console.WriteLine ("4 - Place Order" );
         Console.WriteLine ("5 - View Cart" );
         Console.WriteLine ("0 - Sign Out");
 
