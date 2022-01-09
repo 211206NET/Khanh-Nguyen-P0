@@ -19,40 +19,40 @@ public class CustomerRepository : DataRepositoryInterface
         _connectionString = File.ReadAllText("Connection.txt");
     }
 
-    public int SignIn (string email, string pass)
+    public int SignIn (Customer cust)
     {
-        string _eml = email;
-        string _pwd = pass;
-        
+        string _email;
+        string _password;
         using(SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            string querystatement = "SELECT customerId, Email, Pass FROM Customer WHERE Email = @email AND password = @pass";
+            string querystatement = "SELECT CustomerID, Email, Pass FROM Customer WHERE Email = @email AND Pass = @pass";
             using(SqlCommand comd = new SqlCommand(querystatement, conn))
             {
                 SqlParameter param;
-                param = new SqlParameter("@email", _eml);
-                param = new SqlParameter("@pass", _pwd);
+                param = new SqlParameter("@email", cust.email);
+                comd.Parameters.Add(param);
+                param = new SqlParameter("@pass", cust.password);
                 comd.Parameters.Add(param);
                 using (SqlDataReader reader = comd.ExecuteReader())
                 {
-                    while(reader.Read ())
+                    if(reader.Read())
                     {
-                        customer.customerId = reader.GetInt32(0);
-                        customer.email = reader.GetString(1);
-                        customer.password = reader.GetString(2);
-                        if (_eml == customer.email  && _pwd == customer.password)
+                        _email = reader.GetString(1);
+                        _password = reader.GetString(2);
+                        if (cust.email == _email && cust.password == _password)
                         {
+                            Current_User.User_Id = reader.GetInt32(0);
                             Console.WriteLine ("Sign In Successfully");
-                        }
-                        else
-                            Console.WriteLine ("Invalid Email or Password");
+                        }  
                     }
+                    else
+                        Console.WriteLine ("Invalid Email or Password");
                 }
             }
             conn.Close();
         }
-        return customer.customerId;
+        return Current_User.User_Id;
     }
 
     public List<Store> GetAllStores ()
@@ -84,7 +84,7 @@ public class CustomerRepository : DataRepositoryInterface
         using (SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            String queryString = "SELECT * FROM Iventory WHERE storeID = @storeId";
+            String queryString = "SELECT * FROM Inventory WHERE storeID = @storeId";
             using (SqlCommand comd = new SqlCommand(queryString, conn))
             {
                 SqlParameter param;
@@ -118,6 +118,7 @@ public class CustomerRepository : DataRepositoryInterface
             {
                 SqlParameter param;
                 param = new SqlParameter("@pId", pId);
+                comd.Parameters.Add(param);
                 param = new SqlParameter("@sId", sId);
                 comd.Parameters.Add(param);
                 using (SqlDataReader reader = comd.ExecuteReader())
@@ -146,6 +147,7 @@ public class CustomerRepository : DataRepositoryInterface
             {
                 SqlParameter param;
                 param = new SqlParameter ("@sId", stId);
+                comd.Parameters.Add(param);
                 param = new SqlParameter ("@cId", custId);
                 comd.Parameters.Add (param);
                 comd.ExecuteNonQuery();
@@ -180,10 +182,15 @@ public class CustomerRepository : DataRepositoryInterface
                 foreach(OrderItem item in cartItems)
                 {
                     param = new SqlParameter("@oId", _oId);
+                    comd.Parameters.Add(param);
                     param = new SqlParameter("@pId", item.proId);
+                    comd.Parameters.Add(param);
                     param = new SqlParameter("@cId", item.customerId);
+                    comd.Parameters.Add(param);
                     param = new SqlParameter("@sId", item.storeId);
+                    comd.Parameters.Add(param);
                     param = new SqlParameter("@price", item.unitPrice);
+                    comd.Parameters.Add(param);
                     param = new SqlParameter("@qty", item.quantity);
                     comd.Parameters.Add(param);
                     comd.ExecuteNonQuery();
@@ -199,7 +206,7 @@ public class CustomerRepository : DataRepositoryInterface
         using(SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            string searchstatement = $"SELECT * FROM Customer WHERE Email = @email";
+            string searchstatement = "SELECT * FROM Customer WHERE Email = @email";
             using(SqlCommand comd = new SqlCommand(searchstatement, conn))
             {
                 SqlParameter param;

@@ -56,8 +56,11 @@ public class Customer_Logic
         Console.WriteLine("Enter your Password:");
         cus.password = Console.ReadLine();
 
-        Current_User.User_Id = cRepo.SignIn(cus.email, cus.password);
-        isSignedIn = true;
+        cRepo.SignIn(cus);
+        if (Current_User.User_Id != 0)
+        {
+            isSignedIn = true;
+        }
     }
 
     public void SignUp ()

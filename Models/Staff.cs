@@ -1,5 +1,5 @@
 namespace Models;
-public class Staff
+public class Staff : User
 {
     private int _staffId;
     public int staffId

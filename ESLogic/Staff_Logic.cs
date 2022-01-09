@@ -38,13 +38,15 @@ public class Staff_Logic
     public void StaffSignIn ()
     {
         Console.WriteLine("Enter your Email:");
-        _email = Console.ReadLine();
+        staff.email = Console.ReadLine();
         Console.WriteLine("Enter your Password:");
-        _pass = Console.ReadLine();
+        staff.password = Console.ReadLine();
 
-        Current_User.User_Id = sRepo.SignIn(_email, _pass);
-        isSignedIn = true;
-
+        sRepo.SignIn(staff);
+        if (Current_User.User_Id != 0)
+        {
+            isSignedIn = true;
+        }
     }
 
     public void GetAllStoreInventory ()
@@ -93,12 +95,14 @@ public class Staff_Logic
         staff.state = Console.ReadLine();
         Console.WriteLine("Enter Zip Code:");
         staff.zip = Console.ReadLine();
+        Console.WriteLine ("Enter Employee role: Mananger - Supervisor - Associate");
+        staff.role = Console.ReadLine();
         Console.WriteLine("Enter Email:");
         staff.email = Console.ReadLine().ToLower();
         Console.WriteLine("Enter Password:");
         staff.password = Console.ReadLine();
 
-        sRepo.CheckExistCustomer(staff);
+        sRepo.CheckExistStaff(staff);
         if(sRepo.duplicate != true)
         {
             sRepo.CreateCustomer(staff);

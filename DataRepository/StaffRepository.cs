@@ -20,26 +20,31 @@ public class StaffRepository : DataRepositoryInterface
         _connectionString = File.ReadAllText("Connection.txt");
     }
 
-    public int SignIn (string email, string pass)
+    public int SignIn (Staff staff)
     {
-        string _eml = email;
-        string _pwd = pass;
+        string _email;
+        string _password;
         
         using(SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            string querystatement = "SELECT StaffId, Email, Pass FROM Staff";
+            string querystatement = "SELECT StaffId, Email, Pass FROM Staff WHERE Email = @email AND Pass = @pass";
             using(SqlCommand comd = new SqlCommand(querystatement, conn))
             {
+                SqlParameter param;
+                param = new SqlParameter("@email", staff.email);
+                comd.Parameters.Add(param);
+                param = new SqlParameter("@pass", staff.password);
+                comd.Parameters.Add(param);
                 using (SqlDataReader reader = comd.ExecuteReader())
                 {
                     while(reader.Read ())
                     {
-                        staff.staffId = reader.GetInt32(0);
-                        staff.email = reader.GetString(1);
-                        staff.password = reader.GetString(2);
-                        if (_eml == staff.email  && _pwd == staff.password)
+                        _email = reader.GetString(1);
+                        _password = reader.GetString(2);
+                        if (staff.email == _email  && staff.password == _password)
                         {
+                            Current_User.User_Id = reader.GetInt32(0);
                             Console.WriteLine ("Sign In Successfully");
                         }
                         else
@@ -49,7 +54,7 @@ public class StaffRepository : DataRepositoryInterface
             }
             conn.Close();
         }
-            return staff.staffId;
+            return Current_User.User_Id;
     }
 
     public List<Store> GetAllStores ()
@@ -81,7 +86,7 @@ public class StaffRepository : DataRepositoryInterface
         using (SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            String queryString = "SELECT * FROM Iventory WHERE storeID = @storeId";
+            String queryString = "SELECT * FROM Inventory WHERE storeID = @storeId";
             using (SqlCommand comd = new SqlCommand(queryString, conn))
             {
                 SqlParameter param;
@@ -117,7 +122,9 @@ public class StaffRepository : DataRepositoryInterface
             {
                 SqlParameter param;
                 param = new SqlParameter("@qty", _qty);
+                comd.Parameters.Add(param);
                 param = new SqlParameter("@pId", _pId);
+                comd.Parameters.Add(param);
                 param = new SqlParameter("@sId", _sId);
                 comd.Parameters.Add(param);
                 comd.ExecuteNonQuery();  
@@ -132,7 +139,7 @@ public class StaffRepository : DataRepositoryInterface
         using (SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            String queryString = "SELECT * FROM Iventory";
+            String queryString = "SELECT * FROM Inventory";
             using (SqlCommand comd = new SqlCommand(queryString, conn))
             {
                 using (SqlDataReader reader = comd.ExecuteReader())
@@ -151,7 +158,7 @@ public class StaffRepository : DataRepositoryInterface
         return allInventoryList;
     }
 
-    public bool CheckExistCustomer(Staff emp)
+    public bool CheckExistStaff(Staff emp)
     {
         staff = emp;
         using(SqlConnection conn = new SqlConnection(_connectionString))
@@ -182,7 +189,7 @@ public class StaffRepository : DataRepositoryInterface
         using(SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            string insertstatement = "INSERT INTO Staff (firstName, lastName, Street, Apt, City, State_Province, Zip, Email, Pass)  VALUES (@fname, @lname, @street, @apt, @city, @state, @zip, @email, @password)";
+            string insertstatement = "INSERT INTO Staff (firstName, lastName, Street, Apt, City, State_Province, Zip, staff_role, Email, Pass)  VALUES (@fname, @lname, @street, @apt, @city, @state, @zip, @role, @email, @password)";
             using(SqlCommand comd = new SqlCommand(insertstatement, conn))
             {
                 SqlParameter param;
@@ -200,11 +207,12 @@ public class StaffRepository : DataRepositoryInterface
                 comd.Parameters.Add(param);
                 param = new SqlParameter("@zip", staff.zip);
                 comd.Parameters.Add(param);
+                param = new SqlParameter("@role", staff.role);
+                comd.Parameters.Add(param);
                 param = new SqlParameter("@email", staff.email);
                 comd.Parameters.Add(param);
                 param = new SqlParameter("@password", staff.password);
                 comd.Parameters.Add(param);
-
                 comd.ExecuteNonQuery();
             }
             conn.Close();

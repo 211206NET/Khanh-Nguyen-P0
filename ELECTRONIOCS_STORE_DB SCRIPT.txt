@@ -1,0 +1,103 @@
+--Check and drop database if exist one
+Drop database if exists Electronics_Store_db;
+
+--Create database
+create database Electronics_Store_db;
+
+--Show list of existing databbases
+SELECT name, database_id, create_date  
+FROM sys.databases; 
+
+--Specify a data base to use
+use Electronics_Store_db;
+
+--Show list of tables inside a database
+Select * from INFORMATION_SCHEMA.tables;
+
+--Remane a table using Stored Procedure sp_rename
+use Electronics_Store_db;
+GO
+EXEC sp_rename 'product', 'Product';
+
+--Create a table with collumms and contrains
+--MS SQL Server use IDENTITY(start, increment by) to performs auto increment
+--Primary key is specified as columm constrain on the same line
+create table Customer 
+(
+    customerId INTEGER NOT NULL IDENTITY(1001, 1) Primary Key,
+    firstName NVARCHAR(25),
+    lastName NVARCHAR(25),
+    Street NVARCHAR(Max),
+    Apt NVARCHAR(5),
+    City NVARCHAR(50),
+    State_Province NVARCHAR(25),
+    Zip NVARCHAR(5),
+    Email NVARCHAR(Max),
+    Pass NVARCHAR(12)
+);
+create table Staff 
+(
+    staffId INTEGER NOT NULL IDENTITY(2001, 1) Primary Key,
+    firstName NVARCHAR(25),
+    lastName NVARCHAR(25),
+    Street NVARCHAR(Max),
+    Apt NVARCHAR(5),
+    City NVARCHAR(50),
+    State_Province NVARCHAR(25),
+    Zip NVARCHAR(5),
+    staff_role NVARCHAR(25),
+    Email NVARCHAR(Max),
+    Pass NVARCHAR(12)
+);
+create table Store
+(
+    storeId INTEGER NOT NULL IDENTITY(101,1) PRIMARY KEY,
+    storeName NVARCHAR(50)
+);
+create table Product
+(
+    productId INTEGER NOT NULL IDENTITY(10001, 1) PRIMARY KEY,
+    productName NVARCHAR(50),
+    productDescription NVARCHAR(Max),
+    productPrice MONEY 
+);
+create table Orders
+(
+    orderId INTEGER NOT NULL PRIMARY KEY,
+    customerId INTEGER NOT NULL FOREIGN KEY REFERENCES customer(customerId),
+    storeId INTEGER NOT NULL FOREIGN KEY REFERENCES Store(storeId),
+    time_created DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+create table OrderItem
+(
+    orderId INTEGER NOT NULL FOREIGN KEY REFERENCES Orders(orderId),
+    productId INTEGER NOT NULL FOREIGN KEY REFERENCES Product(productId),
+    customerId INTEGER NOT NULL FOREIGN KEY REFERENCES Customer(customerId),
+    storeId INTEGER NOT NULL FOREIGN KEY REFERENCES Store(storeId),
+    quantity INTEGER NOT NULL,
+    total MONEY                   
+);
+create table Inventory
+(
+    storeId INTEGER NOT NULL FOREIGN KEY REFERENCES Store(storeId),
+    productId INTEGER NOT NULL FOREIGN KEY REFERENCES product(productId), 
+    productName NVARCHAR(50),
+    quantity INTEGER NOT NULL,
+    price MONEY
+);
+
+// update trigger
+CREATE TRIGGER Update_Inventory
+ON OrderItem
+FOR INSERT
+AS 
+BEGIN
+        DECLARE
+        @order_qty int,
+        @store_Id int,
+        @product_Id int
+        SELECT @product_Id = inserted.productId, @order_qty = inserted.quantity FROM inserted
+        UPDATE Inventory 
+        SET quantity = quantity - @order_qty
+        WHERE productId = @product_Id AND storeId = @store_Id
+END

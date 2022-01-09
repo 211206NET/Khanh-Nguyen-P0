@@ -27,50 +27,55 @@ public class StoreAction
                     if (oMenu.returned == 31)
                     {
                         clogic.CustomerSignIn ();
-                        if (clogic.isSignedIn == true)
+                        for (int j = 1; j > 0; j++)
                         {
-                            cMenu.DisplayMenu ();
-                            for(int e = 1; e > 0; e++)
+                            if (clogic.isSignedIn == true)
                             {
-                                if (cMenu.returned == 11)
+                                cMenu.DisplayMenu ();
+                                for(int e = 1; e > 0; e++)
                                 {
-                                    clogic.GetAllStores();
-                                }
-                                else if (cMenu.returned == 12)
-                                {
-                                    Current_User.store_Id = clogic.SetStore();
-                                }
-                                else if (cMenu.returned == 13)
-                                {
-                                    clogic.GetStoreInventory(Current_User.store_Id);
-                                }
-                                else if (cMenu.returned == 14)
-                                {
-                                    shoppingList = clogic.AddToCart(Current_User.store_Id);
-                                    clogic.Checkout(shoppingList);
-                                }
-                                else if (cMenu.returned == 15)
-                                {
-                                    foreach (OrderItem it in shoppingList)
+                                    if (cMenu.returned == 11)
                                     {
-                                        if (shoppingList == null)
-                                        {
-                                            Console.WriteLine ("Cart is empty!");
-                                        }
-                                        else
-                                            Console.WriteLine("Cart");
-                                            Console.WriteLine(it);
+                                        clogic.GetAllStores();
                                     }
+                                    else if (cMenu.returned == 12)
+                                    {
+                                        Current_User.store_Id = clogic.SetStore();
+                                    }
+                                    else if (cMenu.returned == 13)
+                                    {
+                                        clogic.GetStoreInventory(Current_User.store_Id);
+                                    }
+                                    else if (cMenu.returned == 14)
+                                    {
+                                        shoppingList = clogic.AddToCart(Current_User.store_Id);
+                                        clogic.Checkout(shoppingList);
+                                    }
+                                    else if (cMenu.returned == 15)
+                                    {
+                                        foreach (OrderItem it in shoppingList)
+                                        {
+                                            if (shoppingList == null)
+                                            {
+                                                Console.WriteLine ("Cart is empty!");
+                                            }
+                                            else
+                                                Console.WriteLine("Cart");
+                                                Console.WriteLine(it);
+                                        }
+                                    }
+                                    else if (cMenu.returned == 0)
+                                    {
+                                        break;
+                                    }
+                                    else 
+                                        Console.WriteLine("Invalid entry!  Try again");
+                                        cMenu.DisplayMenu ();
                                 }
-                                else if (cMenu.returned == 0)
-                                {
-                                    break;
-                                }
-                                else 
-                                    Console.WriteLine("Invalid entry!  Try again");
-                                    cMenu.DisplayMenu ();
+                                
                             }
-                            
+                            else
+                                clogic.CustomerSignIn ();
                         }
                     }
                     else if (oMenu.returned == 32)

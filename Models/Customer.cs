@@ -1,5 +1,5 @@
 ﻿namespace Models;
-public class Customer
+public class Customer : User
 {
     private int _customerId;
     public int customerId
