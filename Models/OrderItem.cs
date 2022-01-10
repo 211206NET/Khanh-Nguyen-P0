@@ -7,7 +7,7 @@ public class OrderItem
     }
 
     // Use this constructor to group orderitem base on order number
-    public OrderItem( int oId, int cId, int sId, int pId, double uprice, int qty)
+    public OrderItem( int oId, int cId, int sId, int pId, decimal uprice, int qty)
     {
         this._orderNumber = oId;
         this._customerId = cId;
@@ -37,8 +37,8 @@ public class OrderItem
         set => _quanity = value;
     }
 
-    private double _unitPrice;
-    public double unitPrice
+    private decimal _unitPrice;
+    public decimal unitPrice
     { 
         get => _unitPrice;
         set => _unitPrice = value;

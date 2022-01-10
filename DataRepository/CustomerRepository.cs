@@ -98,7 +98,7 @@ public class CustomerRepository : DataRepositoryInterface
                         item.productId = reader.GetInt32(1);
                         item.productName = reader.GetString(2);
                         item.quantity = reader.GetInt32(3);
-                        item.unitPrice = reader.GetDouble(4);
+                        item.unitPrice = reader.GetDecimal(4);
                         storeInventoryList.Add(item);
                     }
                 }
@@ -108,12 +108,12 @@ public class CustomerRepository : DataRepositoryInterface
         return storeInventoryList;
     }
 
-    public double GetProductPriceById (int pId, int sId)
+    public decimal GetProductPriceById (int pId, int sId)
     {
         using (SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            String queryString = "SELECT price FROM Iventory WHERE productId = @pId AND storeID = @sId";
+            String queryString = "SELECT price FROM Inventory WHERE productId = @pId AND storeID = @sId";
             using (SqlCommand comd = new SqlCommand(queryString, conn))
             {
                 SqlParameter param;
@@ -125,7 +125,7 @@ public class CustomerRepository : DataRepositoryInterface
                 {
                     while (reader.Read())
                     {
-                        item.unitPrice = reader.GetDouble(0);
+                        item.unitPrice = reader.GetDecimal(0);
                     }
                 }
             }
@@ -141,7 +141,7 @@ public class CustomerRepository : DataRepositoryInterface
         using(SqlConnection conn = new SqlConnection(_connectionString))
         {
             conn.Open();
-            string insertstatement = "INSERT INTO Order (storeID, customerID) VALUES (@sId, @cId) ";
+            string insertstatement = "INSERT INTO Order (storeId, customerId) VALUES (@sId, @cId)";
             string querystatement = "SELECT TOP 1 orderId FROM Order ORDER BY orderId DESC";
             using(SqlCommand comd = new SqlCommand(insertstatement, conn))
             {

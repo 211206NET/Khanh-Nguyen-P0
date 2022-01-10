@@ -16,138 +16,181 @@ public class StoreAction
     CustomerRepository cr = new CustomerRepository ();
     public void Load ()
     {
+        int i;
         mMenu.DisplayMenu();
-        for ( int i = 1; i > 0; i++ )
-        {  
-            if ( mMenu.returned == 1 )
+        for(i = 0; i >= 0; i++)
+        {
+            switch (mMenu.returned)
             {
-                oMenu.DisplayMenu ();
-                for ( int c = 1; c > 0; c++ )
+                case 1:
                 {
-                    if (oMenu.returned == 31)
+                    oMenu.DisplayMenu();
+                    switch (oMenu.returned)
                     {
-                        clogic.CustomerSignIn ();
-                        for (int j = 1; j > 0; j++)
+                        case 31:
                         {
-                            if (clogic.isSignedIn == true)
+                            clogic.CustomerSignIn ();
+                            if(clogic.isSignedIn == true)
                             {
                                 cMenu.DisplayMenu ();
-                                for(int e = 1; e > 0; e++)
+                                switch (cMenu.returned)
                                 {
-                                    if (cMenu.returned == 11)
+                                    case 11:
                                     {
                                         clogic.GetAllStores();
                                     }
-                                    else if (cMenu.returned == 12)
+                                    break;
+                                    case 12:
                                     {
-                                        Current_User.store_Id = clogic.SetStore();
+                                        Current_User.store_Id = clogic.SetStore ();
                                     }
-                                    else if (cMenu.returned == 13)
+                                    break;
+                                    case 13:
                                     {
-                                        clogic.GetStoreInventory(Current_User.store_Id);
-                                    }
-                                    else if (cMenu.returned == 14)
-                                    {
-                                        shoppingList = clogic.AddToCart(Current_User.store_Id);
-                                        clogic.Checkout(shoppingList);
-                                    }
-                                    else if (cMenu.returned == 15)
-                                    {
-                                        foreach (OrderItem it in shoppingList)
+                                        if (Current_User.store_Id == 0)
                                         {
-                                            if (shoppingList == null)
-                                            {
-                                                Console.WriteLine ("Cart is empty!");
-                                            }
-                                            else
-                                                Console.WriteLine("Cart");
-                                                Console.WriteLine(it);
+                                            Current_User.store_Id = clogic.SetStore ();
+                                        }
+                                        clogic.GetStoreInventory (Current_User.store_Id);
+                                    }
+                                    break;
+                                    case 14:
+                                    {
+                                        if (Current_User.store_Id == 0)
+                                        {
+                                            Current_User.store_Id = clogic.SetStore ();
+                                        }
+                                        clogic.AddToCart (Current_User.store_Id);
+                                        clogic.Checkout (shoppingList);
+                                    }
+                                    break;
+                                    case 15:
+                                    {
+                                        foreach(OrderItem item in shoppingList)
+                                        {
+                                            Console.WriteLine (item.ToString());
                                         }
                                     }
-                                    else if (cMenu.returned == 0)
+                                    break;
+                                    case 0:
                                     {
-                                        break;
+                                        Current_User.User_Id = 0;
+                                        Current_User.store_Id = 0;
+                                        Current_User.order_Id = 0;
+                                        //mMenu.DisplayMenu ();
                                     }
-                                    else 
-                                        Console.WriteLine("Invalid entry!  Try again");
+                                    break;
+                                    default:
                                         cMenu.DisplayMenu ();
+                                    break;
+                                }
+                            }
+                            else
+                                Console.WriteLine ("Sign In Fail! Try again");
+                                //clogic.CustomerSignIn ();
+                        }
+                        break;
+                        case 32:
+                        {
+                            slogic.StaffSignIn();
+                            if(slogic.isSignedIn == true)
+                            {
+                                sMenu.DisplayMenu ();
+                                switch (sMenu.returned)
+                                {
+                                    case 21:
+                                    {
+                                        slogic.GetAllStores ();
+                                    }
+                                    break;
+                                    case 22:
+                                    {
+                                        Current_User.store_Id = slogic.SetStore ();
+                                    }
+                                    break;
+                                    case 23:
+                                    {
+                                        if (Current_User.store_Id == 0)
+                                        {
+                                            Current_User.store_Id = slogic.SetStore ();
+                                        }
+                                        slogic.GetInventoryByStore (Current_User.store_Id);
+                                    }
+                                    break;
+                                    case 24:
+                                    {
+                                        slogic.GetAllStoreInventory ();
+                                    }
+                                    break;
+                                    case 25:
+                                    {
+                                        if (Current_User.store_Id == 0)
+                                        {
+                                            Current_User.store_Id = slogic.SetStore ();
+                                        }
+                                        slogic.FillInventory ();
+                                    }
+                                    break;
+                                    case 26:
+                                    {
+                                        slogic.NewEmployee ();
+                                    }
+                                    break;
+                                    case 0:
+                                    {
+                                        Current_User.User_Id = 0;
+                                        Current_User.store_Id = 0;
+                                        Current_User.order_Id = 0;
+                                        //mMenu.DisplayMenu ();
+                                    }
+                                    break;
+                                    default:
+                                        sMenu.DisplayMenu ();
+                                    break;
                                 }
                                 
                             }
                             else
-                                clogic.CustomerSignIn ();
+                                Console.WriteLine ("Sign In Fail! Try again");
+                                slogic.StaffSignIn ();
                         }
-                    }
-                    else if (oMenu.returned == 32)
-                    {
-                        slogic.StaffSignIn ();
-                        if (slogic.isSignedIn == true)
+                        break;
+                        case 33:
                         {
-                            sMenu.DisplayMenu ();
-                            for (int g = 1; g > 0; g++)
-                            {
-                                if (sMenu.returned == 21)
-                                {
-                                    slogic.GetAllStores ();
-                                }
-                                else if (sMenu.returned == 22)
-                                {
-                                    Current_User.store_Id = slogic.SetStore();
-                                }
-                                else if (sMenu.returned == 23)
-                                {
-                                    slogic.GetInventoryByStore(Current_User.store_Id);
-                                }
-                                else if (sMenu.returned == 24)
-                                {
-                                    slogic.GetAllStoreInventory ();
-                                }
-                                else if (sMenu.returned == 25)
-                                {
-                                    slogic.FillInventory();
-                                }
-                                else if (sMenu.returned == 26)
-                                {
-                                    slogic.NewEmployee();
-                                }
-                                else if (sMenu.returned == 0)
-                                {
-                                    break;
-                                }
-                                else
-                                    Console.WriteLine("Invalid entry!  Try again");
-                                    sMenu.DisplayMenu ();
-                            }
+                            mMenu.DisplayMenu();
                         }
-                    }
-                    else if (oMenu.returned == 33)
-                    {
+                        break;
+                        default:
+                            oMenu.DisplayMenu();
                         break;
                     }
-                    else
-                        Console.WriteLine("Invalid entry!  Try again");
-                        oMenu.DisplayMenu ();
                 }
-            }
-            else if( mMenu.returned == 2 )
-            {
-                clogic.SignUp ();
-                for(int x = 1; x > 0; x++ )
+                break;
+                case 2:
                 {
+                    clogic.SignUp ();
                     if (cr.success != true)
-                    {
-                        clogic.SignUp ();
-                    }
+                        {
+                            clogic.SignUp ();
+                        }
                 }
+                break;
+                case 0:
+                {
+                    //Console.WriteLine("Good Bye !!!");
+                    
+                }
+                break;
+                default:
+                    Console.WriteLine("Invalid entry!  Try again");
+                break;
             }
-            else if (mMenu.returned == 0 )
+            //mMenu.DisplayMenu ();
+            if(mMenu.returned == 0)
             {
                 Console.WriteLine("Good Bye !!!");
                 break;
-            }
-            else
-                Console.WriteLine("Invalid entry!  Try again");
-                mMenu.DisplayMenu();
+            }           
         }
     }
 }

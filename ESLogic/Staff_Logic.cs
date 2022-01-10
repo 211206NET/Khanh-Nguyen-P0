@@ -31,7 +31,7 @@ public class Staff_Logic
        sList = sRepo.GetAllStores();
         foreach(Store s in sList)
         {
-            Console.WriteLine(s.ToString());
+            Console.WriteLine(s.StoreId.ToString() + "    " + s.storeName.ToString() );
         }
     }
 
@@ -54,7 +54,7 @@ public class Staff_Logic
         invList = sRepo.GetAllInventory();
         foreach(Inventory iv in invList)
         {
-            Console.WriteLine (iv.ToString());
+            Console.WriteLine (iv.productId.ToString() + "  " + iv.productName.ToString() + "  " + iv.unitPrice.ToString());
         }
     }
 
@@ -63,7 +63,7 @@ public class Staff_Logic
         invList =  sRepo.GetInventoryByStoreId(storeId);
         foreach(Inventory iv in invList)
         {
-            Console.WriteLine (iv.ToString());
+            Console.WriteLine (iv.productId.ToString() + "  " + iv.productName.ToString() + "  " + iv.unitPrice.ToString());
         }
     }
 

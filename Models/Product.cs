@@ -22,8 +22,8 @@ public class Product
         set => _productDescription = value; 
     } 
 
-    private double _productPrice; 
-    public double productPrice
+    private decimal _productPrice; 
+    public decimal productPrice
     { 
         get => _productPrice; 
         set => _productPrice = value; 

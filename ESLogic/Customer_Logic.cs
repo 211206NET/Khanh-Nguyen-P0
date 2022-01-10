@@ -45,7 +45,7 @@ public class Customer_Logic
         sList = cRepo.GetAllStores();
         foreach(Store s in sList)
         {
-            Console.WriteLine(s.ToString());
+            Console.WriteLine(s.StoreId.ToString() + "    " + s.storeName.ToString() );
         }
     }
 
@@ -104,7 +104,7 @@ public class Customer_Logic
         invList = cRepo.GetInventoryByStoreId(stId);
         foreach(Inventory iv in invList)
         {
-            Console.WriteLine (iv.ToString());
+            Console.WriteLine (iv.productId.ToString() + "  " + iv.productName.ToString() + "  " + iv.unitPrice.ToString());
         }
     }
     public List<OrderItem> AddToCart (int stId)
@@ -113,7 +113,7 @@ public class Customer_Logic
         invList = cRepo.GetInventoryByStoreId(stId);
         foreach(Inventory iv in invList)
         {
-            Console.WriteLine (iv);
+            Console.WriteLine (iv.productId.ToString() + "  " + iv.productName.ToString() + "  " + iv.unitPrice.ToString());
         }
         OrderItem item = new OrderItem ();
         Console.WriteLine("1 - Add an Item to Cart");
@@ -144,6 +144,7 @@ public class Customer_Logic
         {
             Console.WriteLine("1 - Add another Item");
             Console.WriteLine("2 - Checkout and Back to Customer Menu");
+            _input = Console.ReadLine();
             
             if (_input == "1")
             {

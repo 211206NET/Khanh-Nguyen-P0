@@ -27,8 +27,8 @@ public class Inventory
         set => _quantity = value;
     }
 
-    private double _unitPrice;
-    public double unitPrice
+    private decimal _unitPrice;
+    public decimal unitPrice
     {
         get => _unitPrice;
         set => _unitPrice = value;
