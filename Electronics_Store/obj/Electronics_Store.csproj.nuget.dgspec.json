@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj": {}
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store\\Electronics_store.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj": {
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store\\Electronics_store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj",
-        "projectName": "DataRepository",
-        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj",
+        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store\\Electronics_store.csproj",
+        "projectName": "Electronics_store",
+        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store\\Electronics_store.csproj",
         "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\obj\\",
+        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,123 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj"
+              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_UI\\Electronics_store_UI.csproj": {
+                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_UI\\Electronics_store_UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_BL\\Electronics_Store_BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_BL\\Electronics_Store_BL.csproj",
+        "projectName": "Electronics_Store_BL",
+        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_BL\\Electronics_Store_BL.csproj",
+        "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_DL\\Electronics_Store_DL.csproj": {
+                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_DL\\Electronics_Store_DL.csproj"
+              },
+              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj": {
+                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_DL\\Electronics_Store_DL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_DL\\Electronics_Store_DL.csproj",
+        "projectName": "Electronics_Store_DL",
+        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_DL\\Electronics_Store_DL.csproj",
+        "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_DL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj": {
+                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj"
               }
             }
           }
@@ -66,200 +181,14 @@
         }
       }
     },
-    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj": {
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj",
-        "projectName": "Electronics_Store",
-        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj",
+        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj",
+        "projectName": "Electronics_Store_Models",
+        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj",
         "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj": {
-                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj"
-              },
-              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj": {
-                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj"
-              },
-              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.Data.Sqlclient": {
-              "target": "Package",
-              "version": "[4.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj",
-        "projectName": "ESLogic",
-        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj",
-        "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj": {
-                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\DataRepository\\DataRepository.csproj"
-              },
-              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj": {
-                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj"
-              },
-              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj",
-        "projectName": "Menus",
-        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj",
-        "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj",
-        "projectName": "Models",
-        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\obj\\",
+        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -274,6 +203,65 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_UI\\Electronics_store_UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_UI\\Electronics_store_UI.csproj",
+        "projectName": "Electronics_store_UI",
+        "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_UI\\Electronics_store_UI.csproj",
+        "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_BL\\Electronics_Store_BL.csproj": {
+                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_BL\\Electronics_Store_BL.csproj"
+              },
+              "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj": {
+                "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_Models\\Electronics_Store_Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

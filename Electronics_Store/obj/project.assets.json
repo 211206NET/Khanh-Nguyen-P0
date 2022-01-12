@@ -603,56 +603,56 @@
           }
         }
       },
-      "DataRepository/1.0.0": {
+      "Electronics_Store_BL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.Data.Sqlclient": "4.0.0",
-          "Models": "1.0.0"
+          "Electronics_Store_DL": "1.0.0",
+          "Electronics_Store_Models": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/DataRepository.dll": {}
+          "bin/placeholder/Electronics_Store_BL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DataRepository.dll": {}
+          "bin/placeholder/Electronics_Store_BL.dll": {}
         }
       },
-      "ESLogic/1.0.0": {
+      "Electronics_Store_DL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "DataRepository": "1.0.0",
-          "Menus": "1.0.0",
-          "Models": "1.0.0"
+          "Electronics_Store_Models": "1.0.0",
+          "Microsoft.Data.Sqlclient": "4.0.0"
         },
         "compile": {
-          "bin/placeholder/ESLogic.dll": {}
+          "bin/placeholder/Electronics_Store_DL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ESLogic.dll": {}
+          "bin/placeholder/Electronics_Store_DL.dll": {}
         }
       },
-      "Menus/1.0.0": {
+      "Electronics_Store_Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Electronics_Store_Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Electronics_Store_Models.dll": {}
+        }
+      },
+      "Electronics_store_UI/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Models": "1.0.0"
+          "Electronics_Store_BL": "1.0.0",
+          "Electronics_Store_Models": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Menus.dll": {}
+          "bin/placeholder/Electronics_store_UI.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Menus.dll": {}
-        }
-      },
-      "Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Models.dll": {}
+          "bin/placeholder/Electronics_store_UI.dll": {}
         }
       }
     }
@@ -2359,33 +2359,30 @@
         "version.txt"
       ]
     },
-    "DataRepository/1.0.0": {
+    "Electronics_Store_BL/1.0.0": {
       "type": "project",
-      "path": "../DataRepository/DataRepository.csproj",
-      "msbuildProject": "../DataRepository/DataRepository.csproj"
+      "path": "../Electronics_Store_BL/Electronics_Store_BL.csproj",
+      "msbuildProject": "../Electronics_Store_BL/Electronics_Store_BL.csproj"
     },
-    "ESLogic/1.0.0": {
+    "Electronics_Store_DL/1.0.0": {
       "type": "project",
-      "path": "../ESLogic/ESLogic.csproj",
-      "msbuildProject": "../ESLogic/ESLogic.csproj"
+      "path": "../Electronics_Store_DL/Electronics_Store_DL.csproj",
+      "msbuildProject": "../Electronics_Store_DL/Electronics_Store_DL.csproj"
     },
-    "Menus/1.0.0": {
+    "Electronics_Store_Models/1.0.0": {
       "type": "project",
-      "path": "../Menus/Menus.csproj",
-      "msbuildProject": "../Menus/Menus.csproj"
+      "path": "../Electronics_Store_Models/Electronics_Store_Models.csproj",
+      "msbuildProject": "../Electronics_Store_Models/Electronics_Store_Models.csproj"
     },
-    "Models/1.0.0": {
+    "Electronics_store_UI/1.0.0": {
       "type": "project",
-      "path": "../Models/Models.csproj",
-      "msbuildProject": "../Models/Models.csproj"
+      "path": "../Electronics_Store_UI/Electronics_store_UI.csproj",
+      "msbuildProject": "../Electronics_Store_UI/Electronics_store_UI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "ESLogic >= 1.0.0",
-      "Menus >= 1.0.0",
-      "Microsoft.Data.Sqlclient >= 4.0.0",
-      "Models >= 1.0.0"
+      "Electronics_store_UI >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2394,11 +2391,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj",
-      "projectName": "Electronics_Store",
-      "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\Electronics_Store.csproj",
+      "projectUniqueName": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store\\Electronics_store.csproj",
+      "projectName": "Electronics_store",
+      "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store\\Electronics_store.csproj",
       "packagesPath": "C:\\Users\\kwin8\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Electronics_Store\\obj\\",
+      "outputPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kwin8\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2413,14 +2410,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj": {
-              "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\ESLogic\\ESLogic.csproj"
-            },
-            "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj": {
-              "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Menus\\Menus.csproj"
-            },
-            "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\Khanh-Nguyen-P0\\Models\\Models.csproj"
+            "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_UI\\Electronics_store_UI.csproj": {
+              "projectPath": "C:\\Users\\kwin8\\Documents\\Revature Worksspace\\P0-2\\Electronics_Store_UI\\Electronics_store_UI.csproj"
             }
           }
         }
@@ -2434,12 +2425,6 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
-        "dependencies": {
-          "Microsoft.Data.Sqlclient": {
-            "target": "Package",
-            "version": "[4.0.0, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

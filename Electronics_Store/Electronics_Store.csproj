@@ -1,13 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Menus\Menus.csproj" />
-    <ProjectReference Include="..\Models\Models.csproj" />
-    <ProjectReference Include="..\ESLogic\ESLogic.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Data.Sqlclient" Version="4.0.0" />
+    <ProjectReference Include="..\Electronics_Store_UI\Electronics_store_UI.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

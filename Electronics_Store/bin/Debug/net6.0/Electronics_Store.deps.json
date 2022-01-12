@@ -6,15 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Electronics_Store/1.0.0": {
+      "Electronics_store/1.0.0": {
         "dependencies": {
-          "ESLogic": "1.0.0",
-          "Menus": "1.0.0",
-          "Microsoft.Data.SqlClient": "4.0.0",
-          "Models": "1.0.0"
+          "Electronics_store_UI": "1.0.0"
         },
         "runtime": {
-          "Electronics_Store.dll": {}
+          "Electronics_store.dll": {}
         }
       },
       "Azure.Core/1.6.0": {
@@ -428,42 +425,42 @@
           }
         }
       },
-      "DataRepository/1.0.0": {
+      "Electronics_Store_BL/1.0.0": {
         "dependencies": {
-          "Microsoft.Data.SqlClient": "4.0.0",
-          "Models": "1.0.0"
+          "Electronics_Store_DL": "1.0.0",
+          "Electronics_Store_Models": "1.0.0"
         },
         "runtime": {
-          "DataRepository.dll": {}
+          "Electronics_Store_BL.dll": {}
         }
       },
-      "ESLogic/1.0.0": {
+      "Electronics_Store_DL/1.0.0": {
         "dependencies": {
-          "DataRepository": "1.0.0",
-          "Menus": "1.0.0",
-          "Models": "1.0.0"
+          "Electronics_Store_Models": "1.0.0",
+          "Microsoft.Data.SqlClient": "4.0.0"
         },
         "runtime": {
-          "ESLogic.dll": {}
+          "Electronics_Store_DL.dll": {}
         }
       },
-      "Menus/1.0.0": {
+      "Electronics_Store_Models/1.0.0": {
+        "runtime": {
+          "Electronics_Store_Models.dll": {}
+        }
+      },
+      "Electronics_store_UI/1.0.0": {
         "dependencies": {
-          "Models": "1.0.0"
+          "Electronics_Store_BL": "1.0.0",
+          "Electronics_Store_Models": "1.0.0"
         },
         "runtime": {
-          "Menus.dll": {}
-        }
-      },
-      "Models/1.0.0": {
-        "runtime": {
-          "Models.dll": {}
+          "Electronics_store_UI.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Electronics_Store/1.0.0": {
+    "Electronics_store/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -776,22 +773,22 @@
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
-    "DataRepository/1.0.0": {
+    "Electronics_Store_BL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "ESLogic/1.0.0": {
+    "Electronics_Store_DL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Menus/1.0.0": {
+    "Electronics_Store_Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Models/1.0.0": {
+    "Electronics_store_UI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
